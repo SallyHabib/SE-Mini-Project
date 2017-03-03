@@ -35,7 +35,9 @@ app.use(flash());
 app.use(expressvalidator());
 //app.use(multer({dest: '/home/sally/Documents/MiniProject (copy)/uploads'}).any());
 //app.use(session({secret:'dhwjbdbhhwbdh'}));
+mongoose.Promise = require('bluebird');
 mongoose.connect(DB_URI);
+
 app.use(router);
 
 

@@ -23,14 +23,14 @@
             padding-left: 70px;
             border: 0;
             border-radius: 0 !important;
-            background: #2c3e50;
+            background: #200000;
         }
 
         .navbar-default .navbar-brand {
-            text-transform: uppercase;
-            font-size: 2em;
+            text-transform: lowercase;
+            font-size:7em;
             text-decoration: none;
-            color: white;
+            color: pink;
             transition: color 0.3s ease;
             cursor: pointer;
         }
@@ -43,7 +43,7 @@
         .card {
             padding: 10px;
             padding-top: 20px;
-            background: #18bc9c;
+            background: #18b00c;
             border: 1px #c8c3ff solid;
             border-radius: 5px;
             text-align: center;
@@ -62,7 +62,7 @@
         .card .card-Password {
             margin-top: 40px;
             font-size: 1.1em;
-            font-weight: bold;
+            
             width: 90%;
             border: 2px solid white;
             color: white;
@@ -87,32 +87,21 @@
         }
     </style>
 </head>
-    <body>
 
+<body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand">View all Projects</a>
+                <a class="navbar-brand" href="/home">View all Projects</a>
             </div>
         </div>
     </nav>
-    
     <div class="row">
         <div class="col-xs-12 col-md-8">
             <div class="row">
-            <script>
-            <% var k = 0; %> 
-            </script>
-             <script>
-            <% var kk = 0; %> 
-            </script>
                 <% for(var i=0; i<userTables.length; i++){%>
-              <%=  k=0;  %>
                 <% for(var j=0;j<Tables.length;j++){%>
-               
-                    <%if ((userTables[i].UserName==Tables[j].userName) && ( k < 2)) { %>
-                 <%=  k=k+1;  %>
-                  <%=  kk=kk+1;  %>
+                    <%if (userTables[i].UserName==Tables[j].userName) { %>
                       <div class="card col-xs-4">
                      <h4 class="card-title"> userName: <%= Tables[j].userName %></h4>
                     <h4 class="card-title"> Full Name: <%= userTables[i].Name %></h4>
@@ -125,13 +114,19 @@
 <% } %>
                    
                     
- <%} %>
+                    
+                    
+                    
+                    
+                    <%} %>
                    
                 <% } %>
-
             </div>
         </div>
-        
-        
+        <div class="col-xs-12 col-md-4">
+            <div class="form-container">
+            </div>
+        </div>
+    </div>
 
 </html>

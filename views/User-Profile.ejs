@@ -23,20 +23,20 @@
             padding-left: 70px;
             border: 0;
             border-radius: 0 !important;
-            background: #2c3e50;
+            background: #200000;
         }
 
         .navbar-default .navbar-brand {
-            text-transform: uppercase;
-            font-size: 2em;
+            text-transform:lowercase;
+            font-size: 7em;
             text-decoration: none;
-            color: white;
+            color: pink;
             transition: color 0.3s ease;
             cursor: pointer;
         }
 
         .navbar-default .navbar-brand:hover {
-            color: #18bc9c;
+            color: #18b00c;
             transition: color 0.3s ease;
         }
 
@@ -55,14 +55,14 @@
         .card .card-UserName {
             color: #02695e;
             font-size: 2em;
-            font-weight: bold;
+            
             text-transform: capitalize;
         }
 
         .card .card-Password {
             margin-top: 40px;
             font-size: 1.1em;
-            font-weight: bold;
+            
             width: 90%;
             border: 2px solid white;
             color: white;
@@ -101,10 +101,9 @@
             <div class="row">
                 <% for(var i=0; i<projectsTables.length; i++){%>
                     <div class="card col-xs-4">
-<h4 class="card-title"> <%= projectsTables[i].userName %></h4>
-<h4 class="card-title"> <%= projectsTables[i].URL %></h4>
-<h4 class="card-title"> <%= projectsTables[i].code %></h4>
-
+<h4 class="card-title">USERNAME: <%= projectsTables[i].userName %></h4>
+<h4 class="card-title">URL: <%= projectsTables[i].URL %></h4>
+<h4 class="card-title">CODE <%= projectsTables[i].code %></h4>
  <img src="<%= projectsTables[i].img2 %>" alt="<%= projectsTables[i].img2 %>" style="width:150px;height:150px;">
                         
                     </div>
