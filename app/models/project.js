@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-
+var mongoosePaginate = require('mongoose-paginate');
+var mongoosePages = require('mongoose-pages');
 var projectSchema = mongoose.Schema({
     userName:{
         type:String,
@@ -12,6 +13,8 @@ code:String,
      
    
 });
+projectSchema.plugin(mongoosePaginate);
+//mongoosePages.skip(projectSchema);
 
 var Project = mongoose.model("project", projectSchema);
 

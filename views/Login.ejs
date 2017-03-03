@@ -96,9 +96,75 @@
             </div>
         </div>
     </nav>
-    
             <div class="form-container">
                 <h3 style="margin-bottom:40px;">Login</h3>
+                 <% if (UserNotFound==1){ %>
+                <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+Username or password is incorrect 
+</div>
+<style>
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+</style>
+<% } %>
+
+ <% if (UserNotFound==2){ %>
+                <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+Username or password empty 
+</div>
+<style>
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+</style>
+<% } %>
+                
+
                 <form class="form" method="POST" action="/check">
                     <div class="form-group">
                         <label for="InputTitle">UserName</label>

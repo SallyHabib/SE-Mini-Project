@@ -99,6 +99,38 @@
     
             <div class="form-container">
                 <h3 style="margin-bottom:40px;">Add Portofolio</h3>
+                 <% if (empty==1){ %>
+                <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+You must Enter  at least one of these fields
+</div>
+<style>
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+</style>
+<% } %>
                 <form class="form" method="POST" action="/Portofolio" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="InputTitle">userName</label>
@@ -116,7 +148,7 @@
 
     <div class="form-group">
     <input type="file" name="img2" id="img2">
-    <img src="/home/sally/Documents/MiniProject (copy)/uploads" alt="no image" style="width:150px;height:150px;">
+    <img src="/home/sally/Documents/MiniProject (copy)/uploads" alt="" style="width:150px;height:150px;">
     </div>                
                      
     
