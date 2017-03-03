@@ -6,18 +6,8 @@ var v=1;
 //global.username="";
 let projectController = {
 
+   
     getAllProjects: function (req, res) {
-
-        User.paginate({},{page :v , limit:10},function (err, result1) {
-             project.find(function (err, Tables) {
-                res.render('Visitor-View',{"userTables":result1.docs,Tables,v} );
-
-            })
-
-        });
-       
-    },
-  /*  getAllProjects: function (req, res) {
 
        User.find(function (err, userTables) {
            project.find(function (err, Tables) {
@@ -26,7 +16,7 @@ let projectController = {
            })
 
        })
-      },*/
+      },
 
 
 
