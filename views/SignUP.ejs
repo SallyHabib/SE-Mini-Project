@@ -168,33 +168,108 @@ You have Enter an already existing UserName
 <% } %>
 
 
-                <form class="form" method="POST" action="/userTable" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="InputTitle">UserName</label>
-                        <input name = "UserName" type="text" class="form-control" id="InputTitle" placeholder="UserName">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputLink">Password</label>
-                        <input name = "Password" type="text" class="form-control" id="InputLink" placeholder="Password">
-                    </div>
-                     <div class="form-group">
-                        <label for="InputLink">Name</label>
-                        <input name = "Name" type="text" class="form-control" id="InputLink" placeholder="FullName">
-                    </div>
-                   
-    <div class="form-group">
+<form class="form-style-4" action="/userTable" method="post" enctype="multipart/form-data">
+<label>
+<span>UserName</span><input type="text" name = "UserName" required="true" />
+</label>
+<label>
+<span>Password</span><input type="Password" name="Password" required="true" />
+</label>
+<label>
+<span>Full Name</span><input type="text" name="Name" required="true" />
+</label>
+<label>
+ <div class="form-group">
     <input type="file" name="img" id="img">
     <img src="/home/sally/Documents/MiniProject (copy)/uploads" alt="no image" style="width:150px;height:150px;">
     </div>
+</label>
+<label>
+<span>&nbsp;</span><input type="submit" value="Create portofolio" />
+</label>
+</form>
 
+ <style type="text/css">
+.form-style-4{
+    width: 450px;
+    font-size: 16px;
+    background: #495C70;
+    padding: 30px 30px 15px 30px;
+    border: 5px solid #53687E;
+}
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 textarea,
+.form-style-4 label
+{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
 
-                    <button type="submit" class="btn btn-default">Create portofolio</button>
-                     </form>
- <form class="form" method="GET" action="/login">
-                    <button type="submit" class="btn btn-default">login</button>
- </form>
-            </div>
-        </div>
-    </div>
+}
+.form-style-4 label {
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-4 label > span{
+    display: inline-block;
+    float: left;
+    width: 150px;
+}
+.form-style-4 input[type=text],
+.form-style-4 input[type=Password] 
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+}
+.form-style-4 textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+.form-style-4 textarea:focus, 
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=email] :focus
+{
+    border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+    background: #576E86;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #A8BACE;
+}
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+background: #394D61;
+}
+</style>
+<script type="text/javascript">
+//auto expand textarea
+function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+}
+</script>
+
 
 </html>

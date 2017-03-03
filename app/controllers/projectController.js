@@ -41,6 +41,7 @@ let projectController = {
             if (err) {
                 res.send(err.message);
             } else {
+                
                 if (!user) {
 let user = new User(req.body);
             if (req.file) {
